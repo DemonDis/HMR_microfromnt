@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Button from "./Button";
 import "./index.css";
+
+import BtnNoHot from "./BtnNoHot"
+import BtnHot from "./BtnHot";
 
 const App = () => (
   <div className="container">
@@ -9,7 +11,8 @@ const App = () => (
     <div>Framework: react</div>
     <div>Language: JavaScript</div>
     <div>CSS: Empty CSS</div>
-    <Button/>
+    <BtnHot/>
+    <BtnNoHot/>
   </div>
 );
 
