@@ -1,5 +1,5 @@
 {
-    "name": "webpack-mf-microfront",
+    "name": "HMR_microfront_react",
     "private": true,
     "scripts": {
         "build": "yarn workspaces run build",
