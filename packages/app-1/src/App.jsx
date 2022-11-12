@@ -1,7 +1,8 @@
 import React from "react";
 
 import BtnApp1 from "./BtnApp1";
-import {BtnApp2} from "./ExportComp";
+import BtnApp2 from "app_2/BtnApp2"
+import { hot } from 'react-hot-loader/root';
 
 import "./index.css";
 
@@ -18,4 +19,4 @@ const App = () => {
   )
 };
 
-export default App
+export default hot(App)

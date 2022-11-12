@@ -1,1 +1,0 @@
-export {default as BtnApp2} from "app_2/BtnApp2";
