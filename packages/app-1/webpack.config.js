@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-var webpack = require("webpack");
+
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
@@ -14,6 +14,7 @@ module.exports = {
   devServer: {
     port: 8080,
     historyApiFallback: true,
+    headers: {"Access-Control-Allow-Origin": "*"}
   },
 
   module: {
@@ -43,7 +44,9 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "app_1",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        app_2: 'app_2@http://localhost:8081/remoteEntry.js'
+      },
       exposes: {},
       shared: {
         ...deps,
@@ -56,9 +59,6 @@ module.exports = {
           requiredVersion: deps["react-dom"],
         },
       },
-    }),
-    new webpack.HotModuleReplacementPlugin({
-      // Options...
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",

@@ -1,11 +1,11 @@
 import React from "react";
 
-const BtnNoHot = () => {
+const BtnApp1 = () => {
   return (
     <div className="container">
-    <button>BtnNoHot</button>
+    <button>BtnApp1</button>
   </div>
   )
 };
 
-export default BtnNoHot;
+export default BtnApp1;

@@ -14,6 +14,7 @@ module.exports = {
   devServer: {
     port: 8081,
     historyApiFallback: true,
+    headers: {"Access-Control-Allow-Origin": "*"}
   },
 
   module: {
@@ -44,7 +45,9 @@ module.exports = {
       name: "app_2",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        './BtnApp2': './src/BtnApp2.jsx',
+      },
       shared: {
         ...deps,
         react: {
