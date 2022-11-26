@@ -3,6 +3,12 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 const deps = require("./package.json").dependencies;
 module.exports = {
+  mode: "development",
+  entry: './src/index.js',
+  // experiments: {
+  //   asset: true
+  // },
+
   output: {
     publicPath: "http://localhost:8080/",
   },
@@ -32,6 +38,17 @@ module.exports = {
       {
         test: /\.(css|s[ac]ss)$/i,
         use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      // {
+      //   test: /\.(png|jpg|jpeg|svg)$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: "file-loader",
+      //   },
+      // },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
       {
         test: /\.(ts|tsx|js|jsx)$/,
