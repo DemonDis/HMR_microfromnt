@@ -1,4 +1,5 @@
 import React from "react";
+import { hot } from 'react-hot-loader/root';
 
 const BtnApp1 = () => {
   return (
@@ -8,4 +9,4 @@ const BtnApp1 = () => {
   )
 };
 
-export default BtnApp1;
+export default hot(BtnApp1);

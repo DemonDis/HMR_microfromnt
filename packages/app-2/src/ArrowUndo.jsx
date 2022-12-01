@@ -1,4 +1,5 @@
 import React from "react";
+import { hot } from 'react-hot-loader/root';
 
 const ArrowUndo = () => {
     return (
@@ -8,4 +9,4 @@ const ArrowUndo = () => {
     );
   };
 
-  export default ArrowUndo
+  export default hot(ArrowUndo)
