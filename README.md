@@ -8,3 +8,5 @@ react-hot-loader
 ```
 @hot-loader/react-dom
 ```
+
+npx npm-check-updates -u
