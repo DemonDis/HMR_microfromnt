@@ -26,7 +26,10 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
-    static: path.join(__dirname, 'dist'),
+    // static: path.join(__dirname, 'dist'),
+
+    liveReload: true,
+    watchFiles: [path.resolve(__dirname, '..', 'PATH_TO_REMOTE_APP')],
   },
 
 

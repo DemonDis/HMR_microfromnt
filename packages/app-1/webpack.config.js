@@ -28,7 +28,10 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
-    static: path.join(__dirname, 'dist'),
+    // static: path.join(__dirname, 'dist'),
+    // devMiddleware: {
+    //   writeToDisk: true,
+    // },
   },
 
   module: {

@@ -4,7 +4,7 @@ const BtnApp2 = () => {
     return (
         <div>
             <button>
-                BtnApp2
+                BtnApp2 ss
             </button>
         </div>
     )
